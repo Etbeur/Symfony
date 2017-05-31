@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Crud</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ cRUD.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ cRUD.name }}</td>
+            </tr>
+            <tr>
+                <th>Firstname</th>
+                <td>{{ cRUD.firstName }}</td>
+            </tr>
+            <tr>
+                <th>Phonenumber</th>
+                <td>{{ cRUD.phoneNumber }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ cRUD.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('crud_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('crud_edit', { 'id': cRUD.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

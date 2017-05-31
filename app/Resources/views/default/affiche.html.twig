@@ -1,0 +1,9 @@
+
+
+{% for article in articles %}
+    <p>{{ article.title }}</p>
+    <p>{{ article.content }}</p>
+    <p>{{ article.createdAt|date('d/m/Y') }}</p>
+    <p>{{ article.vote }}</p>
+    <hr>
+{% endfor %}

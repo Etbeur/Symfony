@@ -1,0 +1,10 @@
+
+<h1>{{success}}</h1>
+{% for info in infos %}
+    <p>{{ info.name }}</p>
+    <p>{{ info.firstName }}</p>
+    <p>{{ info.birthDate|date('d/m/Y') }}</p>
+    <p>{{ info.email }}</p>
+    <p>{{ info.adress }}</p>
+    <hr>
+{% endfor %}
